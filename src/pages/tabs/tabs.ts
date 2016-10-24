@@ -5,6 +5,7 @@ import { AboutPage } from '../about/about';
 import { ContactPage } from '../contact/contact';
 import { ReportPage } from '../report/report';
 
+import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -16,7 +17,14 @@ export class TabsPage {
   tab2Root: any = AboutPage;
   tab3Root: any = ContactPage;
   tab4Root: any = ReportPage;
-  constructor() {
 
+  startPage:string;
+  userInfo: any;
+
+  constructor(public navCtrl:NavController, public navParams:NavParams) {
+    this.startPage = navParams.get("gotoPage");
+    this.userInfo = navParams.get("user");
+    console.log(this.userInfo);
+   // this.navCtrl.push(this.startPage);
   }
 }

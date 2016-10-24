@@ -3,8 +3,8 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
 
 import { TabsPage } from '../pages/tabs/tabs';
-import { ReportPage} from '../pages/report/report';
-import{SignUpPage} from '../pages/signup/signup';
+import { ReportPage } from '../pages/report/report';
+import { SignUpPage } from '../pages/signup/signup';
 
 @Component({
   template: `<ion-nav [root]="rootPage"></ion-nav>`

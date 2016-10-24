@@ -10,44 +10,48 @@
     </ion-navbar>
 </ion-header>
 <ion-content>
-    this is sign up page
-    <h1 center>Sign Up</h1>
+    <h1 text-center>Sign Up</h1>
 
-    <ion-list>
-        <ion-item>
-            <ion-label color="primary">Full name</ion-label>
-            <ion-input placeholder="Enter your full name" [(ngModel)]="fullName"></ion-input>
-        </ion-item>
+    <div class="sign-up-form">
+        <ion-list>
+            <ion-item>
+                <ion-label color="primary">Full name</ion-label>
+                <ion-input placeholder="Enter your full name" [(ngModel)]="fullName"></ion-input>
+            </ion-item>
 
-        <ion-item>
-            <ion-label color="primary">Phone number</ion-label>
-            <ion-input type="tel" placeholder="Enter your phone number" [(ngModel)]="phoneNumber"></ion-input>
-        </ion-item>
+            <ion-item>
+                <ion-label color="primary">Phone number</ion-label>
+                <ion-input type="tel" placeholder="Enter your phone number" [(ngModel)]="phoneNumber"></ion-input>
+            </ion-item>
 
-        <ion-item>
-            <ion-label color="primary">Age</ion-label>
-            <ion-input type="number" placeholder="Age..." [(ngModel)]="age"></ion-input>
-        </ion-item>
+            <ion-item>
+                <ion-label color="primary">Age</ion-label>
+                <ion-input type="number" placeholder="Age..." [(ngModel)]="age"></ion-input>
+            </ion-item>
 
-        <ion-item>
-            <ion-label color="primary">Email</ion-label>
-            <ion-input type="email" placeholder="Email Input" [(ngModel)]="email"></ion-input>
-        </ion-item>
+            <ion-item>
+                <ion-label color="primary">Email</ion-label>
+                <ion-input type="email" placeholder="Email Input" [(ngModel)]="email"></ion-input>
+            </ion-item>
 
-        <ion-item>
-            <ion-label color="primary" style="width: ">Password</ion-label>
-            <ion-input type="password" placeholder="Password Input" [(ngModel)]="password"></ion-input>
-        </ion-item>
+            <ion-item>
+                <ion-label color="primary" style="width: ">Password</ion-label>
+                <ion-input type="password" placeholder="Password Input" [(ngModel)]="password"></ion-input>
+            </ion-item>
 
 
-        <ion-item>
-            <ion-label>Male</ion-label>
-            <ion-radio color="primary" checked="true" value="0"></ion-radio>
-            <ion-label>Falme</ion-label>
-            <ion-radio color="primary" checked="true" value="1"></ion-radio>
-        </ion-item>
-        
-    </ion-list>
-    <button ion-button (click)="doSignup()">CREATE ACCOUNT</button>
+            <ion-item>
+                <ion-label>Male</ion-label>
+                <ion-radio color="primary" checked="true" value="0"></ion-radio>
+                <ion-label>Falme</ion-label>
+                <ion-radio color="primary" checked="true" value="1"></ion-radio>
+            </ion-item>
 
+        </ion-list>
+
+        <div class="footer-signup-form">
+            <button ion-button (click)="doSignup()">CREATE ACCOUNT</button>
+        </div>
+
+    </div>
 </ion-content>

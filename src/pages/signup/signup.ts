@@ -1,8 +1,12 @@
 import { Component } from "@angular/core";
 import { NavController, AlertController } from "ionic-angular";
 
+
+import { TabsPage } from '../tabs/tabs';
+
 @Component({
-    templateUrl: "signup.html"
+    templateUrl: "signup.html",
+    selector:"page-signup"
 })
 
 export class SignUpPage {
@@ -11,8 +15,9 @@ export class SignUpPage {
     public phoneNumber: string;
     public email:string;
     public password: string;
+    
 
-    public constructor(private navCtrl: NavController, public alertCtrl: AlertController) {
+    public constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
         this.fullName = "";
         this.age = 0;
         this.phoneNumber = "";
@@ -35,6 +40,7 @@ export class SignUpPage {
                 text: 'OK, Next',
                 handler: () => {
                     console.log('Agree clicked');
+                    this.navCtrl.push(TabsPage, {user: {fullName: this.fullName}, gotoPage:"HomePage" });
                 }
                 }
             ]
