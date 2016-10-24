@@ -20,12 +20,12 @@
         </ion-item>
 
         <ion-item>
-            <ion-label color="primary" fixed>Phone number</ion-label>
+            <ion-label color="primary">Phone number</ion-label>
             <ion-input type="tel" placeholder="Enter your phone number" [(ngModel)]="phoneNumber"></ion-input>
         </ion-item>
 
         <ion-item>
-            <ion-label color="primary" fixed>Age</ion-label>
+            <ion-label color="primary">Age</ion-label>
             <ion-input type="number" placeholder="Age..." [(ngModel)]="age"></ion-input>
         </ion-item>
 
@@ -41,14 +41,13 @@
 
 
         <ion-item>
-            <ion-label>Daenerys Targaryen</ion-label>
-            <ion-checkbox color="primary" checked="true"></ion-checkbox>
+            <ion-label>Male</ion-label>
+            <ion-radio color="primary" checked="true" value="0"></ion-radio>
+            <ion-label>Falme</ion-label>
+            <ion-radio color="primary" checked="true" value="1"></ion-radio>
         </ion-item>
-        <ion-item>
-            <ion-label>Daenerys Targaryen</ion-label>
-            <ion-checkbox color="dark" checked="false"></ion-checkbox>
-        </ion-item>
+        
     </ion-list>
-    <button ion-button (click)="doSignup()">Submit</button>
+    <button ion-button (click)="doSignup()">CREATE ACCOUNT</button>
 
 </ion-content>
