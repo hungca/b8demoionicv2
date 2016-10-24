@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Sign Up
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    this is sign up page
+    <h1 center>Sign Up</h1>
+
+    <ion-list>
+        <ion-item>
+            <ion-label color="primary">Full name</ion-label>
+            <ion-input placeholder="Enter your full name" [(ngModel)]="fullName"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary" fixed>Phone number</ion-label>
+            <ion-input type="tel" placeholder="Enter your phone number" [(ngModel)]="phoneNumber"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary" fixed>Age</ion-label>
+            <ion-input type="number" placeholder="Age..." [(ngModel)]="age"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary">Email</ion-label>
+            <ion-input type="email" placeholder="Email Input" [(ngModel)]="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary" style="width: ">Password</ion-label>
+            <ion-input type="password" placeholder="Password Input" [(ngModel)]="password"></ion-input>
+        </ion-item>
+
+
+        <ion-item>
+            <ion-label>Daenerys Targaryen</ion-label>
+            <ion-checkbox color="primary" checked="true"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <ion-label>Daenerys Targaryen</ion-label>
+            <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+    </ion-list>
+    <button ion-button (click)="doSignup()">Submit</button>
+
+</ion-content>
