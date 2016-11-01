@@ -40,7 +40,7 @@ export class SignUpPage {
                 text: 'OK, Next',
                 handler: () => {
                     console.log('Agree clicked');
-                    this.navCtrl.push(TabsPage, {user: {fullName: this.fullName}, gotoPage:"HomePage" });
+                    this.navCtrl.push(TabsPage, {user: {fullName: this.fullName, email: this.email}, gotoPage:"HomePage" });
                 }
                 }
             ]
