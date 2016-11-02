@@ -5,6 +5,7 @@ page-signup {
     }
     .sign-up-form ion-label {
         width: 35%;
+        color: color($colors, message, base);
     }
     .sign-up-form .footer-signup-form {
         width: 100%;

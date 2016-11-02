@@ -1,34 +1,29 @@
 <ion-header>
     <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+
         <ion-title>
-            About
+            Contact
         </ion-title>
     </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-    <div class="about-body">
-        <h1>Hello
-            <br>This is an ionic 2 project.
-        </h1>
-        <div style="font-size:20px">How to you start with Ionic 2 ?
-            <br>Step 1: Install ionic
-            <br><i>npm install ionic -g</i>
-            <br>Step 2: Create project
-            <br><i>ionic start ProjectName --v2</i>
-        </div>
-        <div *ngIf="selectedItem" padding>
-            You navigated here from <b>{{selectedItem.title}}</b>
+<ion-content>
 
-        </div>
-        <ion-list>
-            <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+    <div *ngIf="selectedItem" padding>
+        You navigated here from <b>{{selectedItem.title}}</b>
+
+    </div>
+    <ion-list>
+        <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
             <ion-icon name="{{item.icon}}" item-left></ion-icon>
             {{item.title}}
             <div class="item-note" item-right>
                 {{item.note}}
             </div>
             </button>
-        </ion-list>
-    </div>
+    </ion-list>
+
 </ion-content>

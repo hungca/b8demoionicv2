@@ -1,6 +1,20 @@
-<ion-tabs>
-    <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
-    <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>
-    <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>
-    <ion-tab [root]="tab4Root" tabTitel="Report" tabIcon="home"></ion-tab>
-</ion-tabs>
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+
+        <ion-title>
+            {{titlePage}}
+        </ion-title>
+    </ion-navbar>
+
+</ion-header>
+<ion-content>
+    <ion-tabs>
+        <ion-tab (select)="selectTab('Home')" [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
+        <ion-tab (select)="selectTab('About')" [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>
+        <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>
+        <ion-tab [root]="tab4Root" tabTitle="Sign Up" tabIcon="ios-alert-outline"></ion-tab>
+    </ion-tabs>
+</ion-content>

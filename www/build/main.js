@@ -80069,35 +80069,13 @@ setTimeout(function () {
     }
 }, DEVICE_READY_TIMEOUT);
 
-var __decorate$110 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$108 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata$4 = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var HomePage = (function () {
-    function HomePage(navCtrl) {
-        this.navCtrl = navCtrl;
-    }
-    HomePage = __decorate$110([
-        Component({
-            selector: 'page-home',template:/*ion-inline-start:"D:\Project\Demo Ionic 2\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h2>Welcome to Ionic!</h2>\n  <p>\n    This starter project comes with simple tabs-based layout for apps\n    that are going to primarily use a Tabbed UI.\n  </p>\n  <p>\n    Take a look at the <code>src/pages/</code> directory to add or change tabs,\n    update any existing page or create new pages.\n  </p>\n</ion-content>\n'/*ion-inline-end:"D:\Project\Demo Ionic 2\src\pages\home\home.html"*/
-        }), 
-        __metadata$4('design:paramtypes', [NavController])
-    ], HomePage);
-    return HomePage;
-}());
-
-var __decorate$111 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata$5 = (undefined && undefined.__metadata) || function (k, v) {
+var __metadata$2 = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var AboutPage = (function () {
@@ -80120,62 +80098,13 @@ var AboutPage = (function () {
     AboutPage.prototype.itemTapped = function (event, item) {
         this.navCtrl.push(AboutPage, { item: item });
     };
-    AboutPage = __decorate$111([
+    AboutPage = __decorate$108([
         Component({
-            selector: 'page-about',template:/*ion-inline-start:"D:\Project\Demo Ionic 2\src\pages\about\about.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>\n            About\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <div class="about-body">\n        <h1>Hello\n            <br>This is an ionic 2 project.\n        </h1>\n        <div style="font-size:20px">How to you start with Ionic 2 ?\n            <br>Step 1: Install ionic\n            <br><i>npm install ionic -g</i>\n            <br>Step 2: Create project\n            <br><i>ionic start ProjectName --v2</i>\n        </div>\n        <div *ngIf="selectedItem" padding>\n            You navigated here from <b>{{selectedItem.title}}</b>\n\n        </div>\n        <ion-list>\n            <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n            <ion-icon name="{{item.icon}}" item-left></ion-icon>\n            {{item.title}}\n            <div class="item-note" item-right>\n                {{item.note}}\n            </div>\n            </button>\n        </ion-list>\n    </div>\n</ion-content>'/*ion-inline-end:"D:\Project\Demo Ionic 2\src\pages\about\about.html"*/
+            selector: 'page-about',template:/*ion-inline-start:"D:\Project\Demo Ionic 2\src\pages\about\about.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n            <ion-icon name="menu"></ion-icon>\n        </button>\n\n        <ion-title>\n            Contact\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n    <div *ngIf="selectedItem" padding>\n        You navigated here from <b>{{selectedItem.title}}</b>\n\n    </div>\n    <ion-list>\n        <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">\n            <ion-icon name="{{item.icon}}" item-left></ion-icon>\n            {{item.title}}\n            <div class="item-note" item-right>\n                {{item.note}}\n            </div>\n            </button>\n    </ion-list>\n\n</ion-content>'/*ion-inline-end:"D:\Project\Demo Ionic 2\src\pages\about\about.html"*/
         }), 
-        __metadata$5('design:paramtypes', [NavController, NavParams])
+        __metadata$2('design:paramtypes', [NavController, NavParams])
     ], AboutPage);
     return AboutPage;
-}());
-
-var __decorate$112 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata$6 = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var ContactPage = (function () {
-    function ContactPage(navCtrl) {
-        this.navCtrl = navCtrl;
-    }
-    ContactPage = __decorate$112([
-        Component({
-            selector: 'page-contact',template:/*ion-inline-start:"D:\Project\Demo Ionic 2\src\pages\contact\contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="ionic" item-left></ion-icon>\n      @ionicframework\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"D:\Project\Demo Ionic 2\src\pages\contact\contact.html"*/
-        }), 
-        __metadata$6('design:paramtypes', [NavController])
-    ], ContactPage);
-    return ContactPage;
-}());
-
-var __decorate$113 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata$7 = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var ReportPage = (function () {
-    function ReportPage(navCtrl) {
-        this.navCtrl = navCtrl;
-        // this.navCtrl.push(HomePage);
-    }
-    ReportPage.prototype.fun = function () {
-        this.navCtrl.push(HomePage);
-        //this.navCtrl.setRoot(HomePage);
-    };
-    ReportPage = __decorate$113([
-        Component({
-            selector: "page-report",template:/*ion-inline-start:"D:\Project\Demo Ionic 2\src\pages\report\report.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-title>\n\n            Report\n\n        </ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <div>\n\n        This is the report page.\n\n    </div>\n\n    <button (click)="fun()" class="btn btn-default">Go to Home Page</button>\n\n\n\n</ion-content>'/*ion-inline-end:"D:\Project\Demo Ionic 2\src\pages\report\report.html"*/
-        }), 
-        __metadata$7('design:paramtypes', [NavController])
-    ], ReportPage);
-    return ReportPage;
 }());
 
 var __decorate$109 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
@@ -80187,47 +80116,90 @@ var __decorate$109 = (undefined && undefined.__decorate) || function (decorators
 var __metadata$3 = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var TabsPage = (function () {
-    function TabsPage(navCtrl, navParams) {
+var ContactPage = (function () {
+    function ContactPage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        // this tells the tabs component which Pages
-        // should be each tab's root Page
-        this.tab1Root = HomePage;
-        this.tab2Root = AboutPage;
-        this.tab3Root = ContactPage;
-        this.tab4Root = ReportPage;
-        this.startPage = navParams.get("gotoPage");
-        this.userInfo = navParams.get("user");
-        console.log(this.userInfo);
-        // this.navCtrl.push(this.startPage);
     }
-    TabsPage = __decorate$109([
-        Component({template:/*ion-inline-start:"D:\Project\Demo Ionic 2\src\pages\tabs\tabs.html"*/'<ion-tabs>\n    <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n    <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n    <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>\n    <ion-tab [root]="tab4Root" tabTitel="Report" tabIcon="home"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"D:\Project\Demo Ionic 2\src\pages\tabs\tabs.html"*/
+    ContactPage = __decorate$109([
+        Component({
+            selector: 'page-contact',template:/*ion-inline-start:"D:\Project\Demo Ionic 2\src\pages\contact\contact.html"*/'<ion-header>\n <ion-navbar>\n        <button ion-button menuToggle>\n            <ion-icon name="menu"></ion-icon>\n        </button>\n\n        <ion-title>\n            Contact\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-icon name="ionic" item-left></ion-icon>\n      @ionicframework\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"D:\Project\Demo Ionic 2\src\pages\contact\contact.html"*/
         }), 
-        __metadata$3('design:paramtypes', [NavController, NavParams])
-    ], TabsPage);
-    return TabsPage;
+        __metadata$3('design:paramtypes', [NavController])
+    ], ContactPage);
+    return ContactPage;
 }());
 
-var __decorate$108 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+var __decorate$110 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata$2 = (undefined && undefined.__metadata) || function (k, v) {
+var __metadata$4 = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var HomePage = (function () {
+    function HomePage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.userInfo = JSON.stringify(navParams.get("user"));
+        console.log("homePage", this.userInfo);
+        // this.navCtrl.push(this.startPage);
+    }
+    HomePage = __decorate$110([
+        Component({
+            selector: 'page-home',template:/*ion-inline-start:"D:\Project\Demo Ionic 2\src\pages\home\home.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n            <ion-icon name="menu"></ion-icon>\n        </button>\n\n        <ion-title>\n            Home\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n    <h2>Welcome to Ionic!</h2>\n    <p>\n        This starter project comes with simple tabs-based layout for apps that are going to primarily use a Tabbed UI.\n    </p>\n    <p>\n        Take a look at the <code>src/pages/</code> directory to add or change tabs, update any existing page or create new pages.\n    </p>\n    <div class="user-info-div">\n        User Info: {{userInfo}}\n    </div>\n</ion-content>'/*ion-inline-end:"D:\Project\Demo Ionic 2\src\pages\home\home.html"*/
+        }), 
+        __metadata$4('design:paramtypes', [NavController, NavParams])
+    ], HomePage);
+    return HomePage;
+}());
+
+var __decorate$111 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata$5 = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var ReportPage = (function () {
+    function ReportPage(navCtrl) {
+        this.navCtrl = navCtrl;
+        // this.navCtrl.push(HomePage);
+    }
+    ReportPage.prototype.fun = function () {
+        this.navCtrl.push(HomePage);
+        //this.navCtrl.setRoot(HomePage);
+    };
+    ReportPage = __decorate$111([
+        Component({
+            selector: "page-report",template:/*ion-inline-start:"D:\Project\Demo Ionic 2\src\pages\report\report.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n            <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n\n\n        <ion-title>\n\n            Report\n\n        </ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n    <div>\n\n        This is the report page.\n\n    </div>\n\n    <button (click)="fun()" class="btn btn-default">Go to Home Page</button>\n\n\n\n</ion-content>'/*ion-inline-end:"D:\Project\Demo Ionic 2\src\pages\report\report.html"*/
+        }), 
+        __metadata$5('design:paramtypes', [NavController])
+    ], ReportPage);
+    return ReportPage;
+}());
+
+var __decorate$112 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata$6 = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var SignUpPage = (function () {
     function SignUpPage(navCtrl, alertCtrl) {
         this.navCtrl = navCtrl;
         this.alertCtrl = alertCtrl;
-        this.fullName = "";
-        this.age = 0;
-        this.phoneNumber = "";
-        this.password = "";
-        this.email = "";
+        // this.fullName = "";
+        // this.age = 0;
+        // this.phoneNumber = "";
+        // this.password = "";
+        // this.email="";
     }
     SignUpPage.prototype.doSignup = function () {
         var _this = this;
@@ -80245,18 +80217,19 @@ var SignUpPage = (function () {
                     text: 'OK, Next',
                     handler: function () {
                         console.log('Agree clicked');
-                        _this.navCtrl.push(TabsPage, { user: { fullName: _this.fullName, email: _this.email }, gotoPage: "HomePage" });
+                        _this.navCtrl.setRoot(HomePage, { user: { fullName: _this.fullName, email: _this.email }, gotoPage: "HomePage" });
+                        //this.navCtrl.setRoot(TabsPage, {user: {fullName: this.fullName, email: this.email}, gotoPage:"HomePage" });
                     }
                 }
             ]
         });
         confirm.present();
     };
-    SignUpPage = __decorate$108([
-        Component({template:/*ion-inline-start:"D:\Project\Demo Ionic 2\src\pages\signup\signup.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <button menuToggle>\n\n            <ion-icon name="menu"></ion-icon>\n\n        </button>\n\n\n\n        <ion-title>\n\n            Sign Up\n\n        </ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n\n    <h1 text-center>Sign Up</h1>\n\n\n\n    <div class="sign-up-form">\n\n        <ion-list>\n\n            <ion-item>\n\n                <ion-label color="primary">Full name</ion-label>\n\n                <ion-input placeholder="Enter your full name" [(ngModel)]="fullName"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label color="primary">Phone number</ion-label>\n\n                <ion-input type="tel" placeholder="Enter your phone number" [(ngModel)]="phoneNumber"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label color="primary">Age</ion-label>\n\n                <ion-input type="number" placeholder="Age..." [(ngModel)]="age"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label color="primary">Email</ion-label>\n\n                <ion-input type="email" placeholder="Email Input" [(ngModel)]="email"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label color="primary" style="width: ">Password</ion-label>\n\n                <ion-input type="password" placeholder="Password Input" [(ngModel)]="password"></ion-input>\n\n            </ion-item>\n\n\n\n\n\n            <ion-item>\n\n                <ion-label my-text-color>Male</ion-label>\n\n                <ion-radio color="primary" checked="true" value="0"></ion-radio>\n\n                <ion-label>Falme</ion-label>\n\n                <ion-radio color="primary" checked="true" value="1"></ion-radio>\n\n            </ion-item>\n\n\n\n        </ion-list>\n\n\n\n        <div class="footer-signup-form">\n\n            <button ion-button (click)="doSignup()">CREATE ACCOUNT</button>\n\n        </div>\n\n\n\n    </div>\n\n</ion-content>'/*ion-inline-end:"D:\Project\Demo Ionic 2\src\pages\signup\signup.html"*/,
+    SignUpPage = __decorate$112([
+        Component({template:/*ion-inline-start:"D:\Project\Demo Ionic 2\src\pages\signup\signup.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n        <ion-title>Sign Up</ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <h1 text-center>Sign Up</h1>\n\n\n\n    <div class="sign-up-form">\n\n        <ion-list>\n\n            <ion-item>\n\n                <ion-label color="primary">Full name</ion-label>\n\n                <ion-input placeholder="Enter your full name" [(ngModel)]="fullName"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label color="primary">Phone number</ion-label>\n\n                <ion-input type="tel" placeholder="Enter your phone number" [(ngModel)]="phoneNumber"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label color="primary">Age</ion-label>\n\n                <ion-input type="number" placeholder="Age..." [(ngModel)]="age"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label color="primary">Email</ion-label>\n\n                <ion-input type="email" placeholder="Email Input" [(ngModel)]="email"></ion-input>\n\n            </ion-item>\n\n\n\n            <ion-item>\n\n                <ion-label color="primary" style="width: ">Password</ion-label>\n\n                <ion-input type="password" placeholder="Password Input" [(ngModel)]="password"></ion-input>\n\n            </ion-item>\n\n\n\n            <!--<label message-color="error">This is a sign up page</label>-->\n\n            <!--<ion-item>\n\n                <ion-label text-size="large">Male</ion-label>\n\n                <ion-radio color="primary" checked="true" value="0"></ion-radio>\n\n                <ion-label>Falme</ion-label>\n\n                <ion-radio color="primary" checked="true" value="1"></ion-radio>\n\n            </ion-item>-->\n\n\n\n        </ion-list>\n\n\n\n        <div class="footer-signup-form">\n\n            <button ion-button (click)="doSignup()">CREATE ACCOUNT</button>\n\n        </div>\n\n\n\n    </div>\n\n</ion-content>'/*ion-inline-end:"D:\Project\Demo Ionic 2\src\pages\signup\signup.html"*/,
             selector: "page-signup"
         }), 
-        __metadata$2('design:paramtypes', [NavController, AlertController])
+        __metadata$6('design:paramtypes', [NavController, AlertController])
     ], SignUpPage);
     return SignUpPage;
 }());
@@ -80271,21 +80244,82 @@ var __metadata$1 = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var MyApp = (function () {
-    function MyApp(platform) {
+    function MyApp(
+        // platform: Platform, 
+        platform, // use public to access from out side constructor
+        menu) {
+        this.platform = platform;
+        this.menu = menu;
         this.rootPage = SignUpPage; //TabsPage;
-        platform.ready().then(function () {
+        this.initializeApp();
+        this.pages = [
+            { title: 'Home', component: HomePage },
+            { title: 'Contact', component: ContactPage },
+            { title: 'Report', component: ReportPage },
+            { title: 'Mange', component: AboutPage },
+            { title: 'Logout', component: SignUpPage }
+        ];
+    }
+    MyApp.prototype.initializeApp = function () {
+        this.platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
             StatusBar.styleDefault();
         });
-    }
+    };
+    MyApp.prototype.openPage = function (page) {
+        // close the menu when clicking a link from the menu
+        this.menu.close();
+        // navigate to the new page if it is not the current page
+        this.nav.setRoot(page.component);
+        //this.nav.push(page.component);
+    };
+    __decorate$1([
+        ViewChild(Nav), 
+        __metadata$1('design:type', Nav)
+    ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate$1([
-        Component({
-            template: "<ion-nav [root]=\"rootPage\"></ion-nav>"
+        Component({template:/*ion-inline-start:"D:\Project\Demo Ionic 2\src\app\app.html"*/'<ion-menu [content]="content">\n\n    <ion-header>\n        <ion-toolbar>\n            <ion-title>Pages</ion-title>\n        </ion-toolbar>\n    </ion-header>\n\n    <ion-content>\n        <ion-list>\n            <button ion-item icon-left *ngFor="let p of pages" (click)="openPage(p)">\n               <ion-icon name="ios-chatboxes-outline"></ion-icon>\n        {{p.title}}\n      </button>\n        </ion-list>\n    </ion-content>\n\n</ion-menu>\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"D:\Project\Demo Ionic 2\src\app\app.html"*/
         }), 
-        __metadata$1('design:paramtypes', [Platform])
+        __metadata$1('design:paramtypes', [Platform, MenuController])
     ], MyApp);
     return MyApp;
+}());
+
+var __decorate$113 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata$7 = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var TabsPage = (function () {
+    function TabsPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        // this tells the tabs component which Pages
+        // should be each tab's root Page
+        this.tab1Root = HomePage;
+        this.tab2Root = AboutPage;
+        this.tab3Root = ContactPage;
+        this.tab4Root = ReportPage;
+        this.startPage = navParams.get("gotoPage");
+        this.userInfo = navParams.get("user");
+        console.log(this.userInfo);
+        // this.navCtrl.push(this.startPage);
+    }
+    TabsPage.prototype.selectTab = function (tabName) {
+        console.log("tab=" + tabName);
+        this.titlePage = tabName;
+    };
+    TabsPage = __decorate$113([
+        Component({template:/*ion-inline-start:"D:\Project\Demo Ionic 2\src\pages\tabs\tabs.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n            <ion-icon name="menu"></ion-icon>\n        </button>\n\n        <ion-title>\n            {{titlePage}}\n        </ion-title>\n    </ion-navbar>\n\n</ion-header>\n<ion-content>\n    <ion-tabs>\n        <ion-tab (select)="selectTab(\'Home\')" [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n        <ion-tab (select)="selectTab(\'About\')" [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n        <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>\n        <ion-tab [root]="tab4Root" tabTitle="Sign Up" tabIcon="ios-alert-outline"></ion-tab>\n    </ion-tabs>\n</ion-content>'/*ion-inline-end:"D:\Project\Demo Ionic 2\src\pages\tabs\tabs.html"*/
+        }), 
+        __metadata$7('design:paramtypes', [NavController, NavParams])
+    ], TabsPage);
+    return TabsPage;
 }());
 
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {

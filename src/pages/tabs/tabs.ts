@@ -20,6 +20,7 @@ export class TabsPage {
 
   startPage:string;
   userInfo: any;
+  public titlePage:string;
 
   constructor(public navCtrl:NavController, public navParams:NavParams) {
     this.startPage = navParams.get("gotoPage");
@@ -27,4 +28,9 @@ export class TabsPage {
     console.log(this.userInfo);
    // this.navCtrl.push(this.startPage);
   }
+  selectTab(tabName){
+    console.log("tab="+tabName);
+    this.titlePage= tabName;
+  }
+  
 }

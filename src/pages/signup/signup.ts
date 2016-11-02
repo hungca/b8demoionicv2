@@ -3,6 +3,7 @@ import { NavController, AlertController } from "ionic-angular";
 
 
 import { TabsPage } from '../tabs/tabs';
+import { HomePage } from '../home/home';
 
 @Component({
     templateUrl: "signup.html",
@@ -15,14 +16,14 @@ export class SignUpPage {
     public phoneNumber: string;
     public email:string;
     public password: string;
-    
+    private alias: string;
 
     public constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
-        this.fullName = "";
-        this.age = 0;
-        this.phoneNumber = "";
-        this.password = "";
-        this.email="";
+        // this.fullName = "";
+        // this.age = 0;
+        // this.phoneNumber = "";
+        // this.password = "";
+        // this.email="";
     }
 
     public doSignup(){
@@ -40,7 +41,8 @@ export class SignUpPage {
                 text: 'OK, Next',
                 handler: () => {
                     console.log('Agree clicked');
-                    this.navCtrl.push(TabsPage, {user: {fullName: this.fullName, email: this.email}, gotoPage:"HomePage" });
+                    this.navCtrl.setRoot(HomePage, {user: {fullName: this.fullName, email: this.email}, gotoPage:"HomePage" });
+                    //this.navCtrl.setRoot(TabsPage, {user: {fullName: this.fullName, email: this.email}, gotoPage:"HomePage" });
                 }
                 }
             ]
